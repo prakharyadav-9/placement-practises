@@ -1,6 +1,6 @@
 package com.py.sheet.sorting;
 
-public class Q2_CheckSorted {
+public class Q02_CheckSorted {
 
 	/*
 	 * Given an array arr[] of size N, check if it is sorted in non-decreasing order or not. 

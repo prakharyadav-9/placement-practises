@@ -2,7 +2,7 @@ package com.py.sheet.sorting;
 
 import java.util.Arrays;
 
-public class Q1_SecondLargetsElement {
+public class Q01_SecondLargetsElement {
 
 	static int print2largest(int arr[], int n) {
         int [] tmp= new int[2];

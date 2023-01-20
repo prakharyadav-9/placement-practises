@@ -1,6 +1,6 @@
 package com.py.sheet.sorting;
 
-public class Q3_CheckRotatedSort {
+public class Q03_CheckRotatedSort {
 
 
 	public static boolean check(int[] nums) {
