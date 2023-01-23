@@ -2,7 +2,7 @@ package com.py.sheet.sorting;
 
 import java.util.Arrays;
 
-public class Q7_MoveZerosRight {
+public class Q07_MoveZerosRight {
 	
 	private static void swap(int arr[],int i,int j) {
 		int temp=arr[i];
