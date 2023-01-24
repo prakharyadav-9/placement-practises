@@ -1,4 +1,4 @@
-package com.py.sheet.sorting;
+package com.py.sheet.array.easy;
 
 public class Q15_Max1Row {
 	static int rowWithMax1s(int arr[][], int n, int m) {

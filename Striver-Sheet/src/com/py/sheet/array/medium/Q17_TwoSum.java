@@ -1,4 +1,4 @@
-package com.py.sheet.sorting;
+package com.py.sheet.array.medium;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.py.sheet.sorting;
+package com.py.sheet.array.easy;
 
 public class Q12_MaxSumOfKConsecutives {
 
