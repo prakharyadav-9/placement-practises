@@ -28,7 +28,6 @@ public class Q25_MakeZeros {
 		int target [][] = new int[arr.length][arr[0].length];
 		for (int row=0;row< arr.length;row++) {
 			List<Integer> colss = new ArrayList<>();
-//			colss.clear();
 			for(int col=0; col<arr[row].length;col++) {
 				if(arr[row][col]==0) {
 					colss.add(col);
@@ -36,7 +35,6 @@ public class Q25_MakeZeros {
 				}
 			}
 		}
-		System.out.println(idx);
 		for(int row=0;row<arr.length;row++) {
 			for(int col=0;col<arr[row].length;col++) {
 				target[row][col]=arr[row][col];
@@ -65,9 +63,7 @@ public class Q25_MakeZeros {
 				}
 				target[row][lcc] = uRE+dRE+lce+rce;
 			}
-			
-		}
-		
+		} // after this just copy the temporary Matrix in to the original
 		for (int row=0;row< arr.length;row++) {
 			for(int col=0; col<arr[row].length;col++) {
 				arr[row][col]=target[row][col];
