@@ -26,7 +26,7 @@ public class Q03_CheckRotatedSort {
 //		return true;
     }
 	public static void main(String[] args) {
-		int array[] = {2,3,4,5};//{1,2,3,4,5};//{3,4,5,1,2,3,0,3};//{10,7,6,5,3,9,2,1,8,4};
+		int array[] = {0,2};//{2,3,4,5};//{1,2,3,4,5};//{3,4,5,1,2,3,0,3};//{10,7,6,5,3,9,2,1,8,4};
 		System.out.println(check(array));
 	}
 
