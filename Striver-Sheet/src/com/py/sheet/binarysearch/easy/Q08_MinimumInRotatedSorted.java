@@ -9,17 +9,17 @@ public class Q08_MinimumInRotatedSorted {
         //complete the function here
 		int l=0;
 		int h=n-1;
-		int mid = l+ (h-l)/2;
 		while(l<h) {
-			mid = l+ (h-l)/2;
-			if(arr[mid]>arr[h]) {
-					l=mid+1;
+			int mid = l+ (h-l)/2;
+			if(arr[l]<=arr[mid] && arr[mid] <arr[h]) {
+				h=mid-1;
 			}else {
-				h=mid;
+				l=mid+1;
 			}
-//			else if(arr[mid]>arr[l]){
-////				h=mid-1;
-//				l=mid;
+//			if(arr[mid]>arr[h]) {
+//					l=mid+1;
+//			}else {
+//				h=mid;
 //			}
 		}
 		return arr[h];
