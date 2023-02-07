@@ -22,7 +22,7 @@ public class Q09_SIngleOccueance {
     }
 	
 	public static void main(String[] args) {
-		int arr[] = {1, 2, 3, 3,-4, 50, 50, 65, 65};
+		int arr[] = {1,1, 2,2, 3, 3,-4,-4, 50, 50, 65, 65};
 		System.out.println(findOnce(arr, arr.length));
 	}
 
