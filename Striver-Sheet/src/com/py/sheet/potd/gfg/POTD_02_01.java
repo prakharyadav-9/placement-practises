@@ -1,6 +1,6 @@
-package com.py.sheet;
+package com.py.sheet.potd.gfg;
 
-public class POTD_01Feb {
+public class POTD_02_01 {
 
 	public static long distinctColoring(int N, int[]r, int[]g, int[]b){
         //code here
