@@ -15,6 +15,7 @@ public class Q02_ReverseWords {
 		int len= S.length();
 		StringBuilder result = new StringBuilder(len);
 		Stack<Character> stack = new Stack<>();
+		
 		for(int i= len-1;i>=0;i--) {
 			char ch= S.charAt(i);
 			if(ch!='.') {
@@ -25,9 +26,6 @@ public class Q02_ReverseWords {
 				}
 				result.append('.');
 			}
-		}
-		while(!stack.isEmpty()) {
-			result.append(stack.pop());
 		}
         return result.toString();
     }
