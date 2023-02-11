@@ -15,6 +15,10 @@ public class POTD_02_11 {
 	 * 		if S[i]!='?', then S[i]!=S[i+1]
 	 */
 	
+	
+	/* 
+	 * MY SOLUTIONNNNNNNNN
+	 
 	public static int getMinimumDays(int n, String str, int[] arr) {
         // code here
 		int days=0;
@@ -26,43 +30,68 @@ public class POTD_02_11 {
 				break;
 			}
 		}
+		Set<Integer> indxs = new HashSet<>();
 		if(check) {
-//			System.out.println("we need to do some operation");
-			Set<Integer> indxs = new HashSet<>();
 			for(int i=1;i<n;i++) {
-				int pick= arr[i-1];
-				if(pick==(n-1) ) { //|| pick==0
-					char ch0 = str.charAt(pick-1), ch1 = str.charAt(pick);
-					if(ch0==ch1 && (!indxs.contains(pick) || !indxs.contains(pick-1))) {
+				if(!(indxs.contains(arr[i]) || indxs.contains(arr[i]-1)
+						|| indxs.contains(arr[i]+1) )
+						) {					
+					if((arr[i] ==0) && str.charAt(arr[i])== str.charAt(arr[i]+1)) {
+						indxs.add(arr[i]);
 						days++;
-						indxs.add(pick);
-					}
-				}
-				else if(pick==0 && !indxs.contains(pick)) {
-					char ch1 = str.charAt(pick), ch2 = str.charAt(pick+1);
-					if(ch1==ch2 && (!indxs.contains(pick) || !indxs.contains(pick+1))) {
-						indxs.add(pick);
+					}else if((arr[i]==n-1) && str.charAt(arr[i])== str.charAt(arr[i]-1)) {
+						indxs.add(arr[i]);
 						days++;
 					}
-				}else {
-					char ch2=str.charAt(pick+1) ,ch1=str.charAt(pick), ch0= str.charAt(pick-1);
-					if((ch1==ch2 || ch1==ch0) && (!indxs.contains(pick) 
-							|| !indxs.contains(pick+1) || !indxs.contains(pick-1) )) {
-						indxs.add(pick);
+					else if(str.charAt(arr[i]) == str.charAt(arr[i]-1) 
+							|| str.charAt(arr[i]) ==str.charAt(arr[i]+1)) {
+						indxs.add(arr[i]);
 						days++;
 					}
 				}
 			}
 		}
+		System.out.println(indxs);
 		// if we dont have any repeated elements then simply return 0 
 		return days;
     }
+    
+    */
 	
 	public static void main(String ...arg) {
-		String str= "aabb";//"aabb";//"abcd";//
+		String str= "aabb";//"abcd";//
 		int arr[] = {2,1,3,0};
 		
 		System.out.printf("minimum days:: %d",getMinimumDays(arr.length, str, arr));
 		
 	}
+	
+	/*
+	 * SUBMITEDDDD
+	 */
+	public static int getMinimumDays(int N, String S, int[] P) {
+        // code here
+        char[] c = S.toCharArray();
+        int ans=0;
+        for(int i=0;i<N;i++) {
+            int idx = P[i];
+            if(idx==0) {
+                if(idx+1<N && c[idx]==c[idx+1]) {
+                    c[idx]='?';
+                    ans = i+1;
+                }
+            } else if(idx==N-1) {
+                if(idx-1>=0 && c[idx]==c[idx-1]) {
+                    c[idx]='?';
+                    ans = i+1;
+                }
+            } else {
+                if(c[idx]==c[idx-1] || c[idx]==c[idx+1]) {
+                    c[idx]='?';
+                    ans = i+1;
+                }
+            }
+        }
+        return ans;
+    }
 }
