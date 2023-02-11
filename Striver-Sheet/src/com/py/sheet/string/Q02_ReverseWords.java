@@ -1,7 +1,5 @@
 package com.py.sheet.string;
 
-import java.util.Stack;
-
 public class Q02_ReverseWords {
 
 	 /*
@@ -14,20 +12,12 @@ public class Q02_ReverseWords {
         // code here 
 		int len= S.length();
 		StringBuilder result = new StringBuilder(len);
-		Stack<Character> stack = new Stack<>();
-		
-		for(int i= len-1;i>=0;i--) {
-			char ch= S.charAt(i);
-			if(ch!='.') {
-				stack.push(ch);
-			}else {
-				while(!stack.isEmpty()) {
-					result.append(stack.pop());
-				}
-				result.append('.');
-			}
+		String[] splittedString = S.split("\\.");
+		for(int i= splittedString.length-1;i>0;i--) {
+			result.append(splittedString[i]).append('.');
 		}
-        return result.toString();
+		result.append(splittedString[0]);
+		return result.toString();
     }
 	
 	public static void main(String[] args) {
