@@ -1,6 +1,6 @@
 package com.py.sheet.string.easy;
 
-class LargesOddNUmber {
+class Q03_LargestOddNUmber {
 
 	/*
 	 * Given an string S, representing a large interger. 
