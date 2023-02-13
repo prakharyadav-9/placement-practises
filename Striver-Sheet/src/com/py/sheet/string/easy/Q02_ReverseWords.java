@@ -1,4 +1,4 @@
-package com.py.sheet.string;
+package com.py.sheet.string.easy;
 
 public class Q02_ReverseWords {
 
