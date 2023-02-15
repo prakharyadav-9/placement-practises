@@ -31,17 +31,18 @@ public class Q06_CHeckRotatedString {
             if(s1.charAt(j++)!=s2.charAt(i))
                 return false;
         }
+        System.out.println(index);
         return true;
 	}
 	
 	public static boolean areRotations(String s1, String s2 ){
 		// Your code here
-		return checkRotations(s1, s2)|| checkRotations(s2, s1);
+		return checkRotations(s1, s2);//|| checkRotations(s2, s1);
 	}
 	
 	public static void main(String[] args) {
-		String s1= "geeksgeeksforgeeks",//"geeksforgeeks",
-				s2="geeksgeeksgeeksfor" ; 
+		String s1= "geeksforgeeks",//"geeksforgeeks",
+				s2="forgeeksgeeks" ; 
 		System.out.printf("%B",(areRotations(s1,s2)));
 		
 	}
