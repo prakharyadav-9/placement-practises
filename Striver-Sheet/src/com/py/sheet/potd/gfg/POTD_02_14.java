@@ -1,7 +1,5 @@
 package com.py.sheet.potd.gfg;
 
-import java.util.Arrays;
-
 public class POTD_02_14 {
 
 
