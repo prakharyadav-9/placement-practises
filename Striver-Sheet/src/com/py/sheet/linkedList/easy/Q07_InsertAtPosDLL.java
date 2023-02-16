@@ -3,6 +3,34 @@ package com.py.sheet.linkedList.easy;
 class Q07_InsertAtPosDLL {
 
 	static NodeD t=null;
+	
+	static NodeD deleteFirst(NodeD head) {
+		if(head==null)
+			 return head = null;
+		NodeD temp = head.next;
+		head=null;
+		 return head=temp;
+	}
+	static NodeD deleteNode(NodeD head,int pos){
+		// Your code here
+		NodeD t=head;
+		if(pos==1)
+			return deleteFirst(t);
+		pos--;
+		while(t.next!=null && pos>1) {
+			pos--;
+			t = t.next;
+		}
+		if(pos>1) {
+			System.err.println("Position passed out of bound deleting.Deleted Nothing!!");
+			return head;
+		}
+		NodeD temp = t.next;
+		t.next=temp.next;
+		temp = null;
+		return head;
+    }
+	
 	static
 	void addNode(NodeD head_ref, int pos, int data){
 		// Your code here
@@ -41,6 +69,9 @@ class Q07_InsertAtPosDLL {
 		int data = 27;
 		System.out.println(head=addFirst(head,100));
 		addNode(head,pos,data);
+		System.out.println(head);
+		pos=9;
+		head=deleteNode(head,pos);
 		System.out.println(head);
 //		while(t.prev!=null) {
 //			System.out.print(t.data+ "->");
