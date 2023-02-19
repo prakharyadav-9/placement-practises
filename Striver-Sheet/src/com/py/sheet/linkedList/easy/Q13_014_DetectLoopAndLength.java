@@ -26,19 +26,60 @@ public class Q13_014_DetectLoopAndLength {
     	return false;
     }
     
+    /*
+     * Q14 - Length ofloop
+     */
+  //Function to find the length of a loop in the linked list.
+    static int countNodesinLoop(Node head){
+        //Add your code here.
+    	int ans = 0;
+    	Set<Node>  nodes = new HashSet<>();
+    	while(head!=null) {
+    		if(!nodes.contains(head)) {
+    			nodes.add(head);
+    		}else {
+    			ans++;
+    			Node t= head.next;
+    			while(t!=head) {
+    				ans++;
+    				t = t.next;
+    			}
+    			break;
+    		}
+    		head = head.next;
+    	}
+    	return ans;
+    }
+    
     
 	public static void main(String[] args) {
-		int arr[] = {1,3,4};//{1,2,3,4,5};//{2};//
+		int arr[] = {1,2,3,4,5};//{25,14,19,33,10,21,39,90,58,45};//{1,2,3,4,5};//{2};//
 		Node head = constructLL(arr);
-		int x=2;
+		int x=4;
 		createLoop(head,x);
-		System.out.printf("THe given LL contains loop? %b",detectLoop(head));
+		System.out.printf("THe given LL contains loop? %b len-> %d"
+				+ "\n starting point:: %d",detectLoop(head),countNodesinLoop(head) , loopStartingPoint(head));
 	}
 
 	
 	
 	
 	
+	private static int loopStartingPoint(Node head) {
+		int point=0;
+		Set<Node>  nodes = new HashSet<>();
+    	while(head!=null) {
+    		if(!nodes.contains(head)) {
+    			point++;
+    			nodes.add(head);
+    		}else {
+    			return point;
+    		}
+    		head = head.next;
+    	}
+		return -1;
+	}
+
 	private static void createLoop(Node head,int x) {
 		if(x==0 || head ==null)
 			return;
