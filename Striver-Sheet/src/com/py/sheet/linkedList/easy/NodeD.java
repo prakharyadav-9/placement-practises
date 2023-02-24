@@ -1,10 +1,10 @@
 package com.py.sheet.linkedList.easy;
 
-class NodeD {
-	int data;
-	NodeD prev;
-	NodeD next;
-	NodeD(int data){
+ public class NodeD {
+	public int data;
+	public NodeD prev;
+	public NodeD next;
+	public NodeD(int data){
 		this.data = data;
 	}
 	

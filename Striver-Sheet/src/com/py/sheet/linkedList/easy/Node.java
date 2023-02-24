@@ -1,13 +1,13 @@
 package com.py.sheet.linkedList.easy;
 
-class Node { 
-    int data; 
-    Node next; 
+public class Node { 
+    public int data; 
+    public Node next; 
 
     Node() { 
     	data = 0; 
     }
-    Node(int d) {
+    public Node(int d) {
     	data = d;
     }  //constructor to create a new node
     
