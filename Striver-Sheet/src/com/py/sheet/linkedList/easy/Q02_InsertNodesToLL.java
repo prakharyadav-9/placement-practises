@@ -33,6 +33,24 @@ public class Q02_InsertNodesToLL {
 		
 	}
 
+	static Node recurssiveReverse(Node head) {
+        if(head == null) {
+            return head;
+        }
+        // last node or only one node
+        if(head.next == null) {
+            return head;
+        }
+ 
+        Node newHeadNode = recurssiveReverse(head.next);
+ 
+        // change references for middle chain
+        head.next.next = head;
+        head.next = null;
+ 
+        // send back new head node in every recursion
+        return newHeadNode;
+    }
 	static Node constructLL(int arr[]){
         // code here
         Node head=null;
