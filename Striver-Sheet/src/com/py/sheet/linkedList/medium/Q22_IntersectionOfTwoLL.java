@@ -28,7 +28,7 @@ public class Q22_IntersectionOfTwoLL {
         	}
         	head1=head1.next;
         }
-        last.next=null;
+        if(last!=null) last.next=null;
 		return head;
     }
 	
