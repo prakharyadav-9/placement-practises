@@ -31,13 +31,15 @@ public class POTD_02_25 {
         	i++;
         	j++;
         }
+        if(j!=tLen)
+        	return 0;
         return 1;
     }
 
 
 	public static void main(String[] args) {
-		String S="GOUAPUI";//ABCD";//"GEEKSFORGEEKS";//"AABCDEFGHIJ";//"GEEKSFORGEEKS";//"DFD";//"DFS";//"GEEKSFORGEEKS";//
-		String T = "GOUA0P1I";//"4D";//"G7G3S";//"A10";//"D1S";//"D1S";//"G7G3S";//
+		String S="A";//"GOUAPUI";//ABCD";//"GEEKSFORGEEKS";//"AABCDEFGHIJ";//"GEEKSFORGEEKS";//"DFD";//"DFS";//"GEEKSFORGEEKS";//
+		String T = "A10000000000000";//"GOUA0P1I";//"4D";//"G7G3S";//"A10";//"D1S";//"D1S";//"G7G3S";//
 		System.out.printf("isValid:: %d",checkCompressed(S, T));
 		
 	}
