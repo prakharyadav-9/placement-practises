@@ -18,7 +18,7 @@ public class Q29_LeftShiftRotateLL {
     		    return head;
     		k--;
     	}
-    	System.out.println(t);
+//    	System.out.println(t);
     	Node forward = t.next;
     	while(forward.next!=null) {
     		forward = forward.next;
@@ -31,8 +31,8 @@ public class Q29_LeftShiftRotateLL {
 	public static void main(String[] args) {
 		int arr[] = {2,20,21};//{1, 2, 3, 4, 5, 6, 7, 8};//{2, 4, 7, 8, 9};//{1,2,2,4,5,6,7,8,};//{1,2,3,4,5};//{2};//
 		Node head=null;
-		int k=2;
-		head=constructLL(arr);// TODO Auto-generated method stub
+		int k=1;
+		head=constructLL(arr);
 		head = rotate(head,k);
 		System.out.println(head);
 
