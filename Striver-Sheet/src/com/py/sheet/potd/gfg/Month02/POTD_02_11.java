@@ -1,4 +1,4 @@
-package com.py.sheet.potd.gfg;
+package com.py.sheet.potd.gfg.Month02;
 
 import java.util.HashSet;
 import java.util.Set;

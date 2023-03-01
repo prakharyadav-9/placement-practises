@@ -1,4 +1,4 @@
-package com.py.sheet.potd.gfg;
+package com.py.sheet.potd.gfg.Month02;
 
 public abstract class POTD_02_13 {
 
