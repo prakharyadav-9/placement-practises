@@ -8,7 +8,7 @@ public class POTD_03_10 {
         long max=Long.MIN_VALUE,secMax = Long.MIN_VALUE, thirdMax = Long.MIN_VALUE;
         long min = Long.MAX_VALUE, secMin = Long.MAX_VALUE;
         
-        // itereating over values
+        // iterating over values
         for(Long ele:arr){
             // for highest positive values
             if(ele>max){
@@ -30,9 +30,6 @@ public class POTD_03_10 {
                 secMin = ele;
             }
         }
-//        System.out.println(max+ " " + secMax+ " "+ thirdMax+ " = "+max*secMax*thirdMax+ " | "+secMax*thirdMax);
-//        System.out.println((min)+ " "+ secMin+ " | "+min*secMin);
-//        System.out.println(secMax*min*secMin);
         // now all the elements are set lets multiply and chech which gives the maximum values
         return Math.max((secMax*thirdMax*max),(max*min*secMin));        
     }
