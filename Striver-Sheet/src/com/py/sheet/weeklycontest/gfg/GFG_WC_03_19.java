@@ -1,4 +1,4 @@
-package com.py.sheet.knowBasicMath;
+package com.py.sheet.weeklycontest.gfg;
 
 import java.util.HashMap;
 import java.util.HashSet;

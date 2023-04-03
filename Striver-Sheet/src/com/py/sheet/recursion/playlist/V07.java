@@ -7,21 +7,21 @@ public class V07 {
 
 	public static void main(String[] args) {
 		int arr[] = {1,2,1};
-		int k=40;
+		int target=2;
 		Stack<Integer> s= new Stack<>();
 		//printSubsquenceesToSumK(0,s,0,k,arr);
 		s.clear();
 //		printAnySubSeqSumK(0,s,0,k,arr);
 		s.clear();
-		System.out.println(countSubSequencesSumK(0,s,0,k,arr));
+		System.out.println(countSubSequencesSumK(0,s,0,target,arr));
 	}
 
 	
-	private static int countSubSequencesSumK(int i, Stack<Integer> s, int j, int k, int[] arr) {
+	private static int countSubSequencesSumK(int i, Stack<Integer> s, int currSum, int target, int[] arr) {
 		// only when all elements are positive
-		if(j>k)
+		if(currSum>target)
 			return 0;
-		if(j==k) {
+		if(currSum==target) {
 			System.out.println(s);
 			return 1;
 		}
@@ -29,9 +29,9 @@ public class V07 {
 		int r = 0;
 		if(i+1<=arr.length) {
 			s.push(arr[i]);
-			l+=countSubSequencesSumK(i+1, s, j+arr[i], k, arr);
+			l+=countSubSequencesSumK(i+1, s, currSum+arr[i], target, arr); // pick
 			s.pop();
-			l+=countSubSequencesSumK(i+1, s, j, k, arr);
+			l+=countSubSequencesSumK(i+1, s, currSum, target, arr); // not pick
 		}
 		return l+r;
 		

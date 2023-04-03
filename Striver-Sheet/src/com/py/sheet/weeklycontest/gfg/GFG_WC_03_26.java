@@ -1,4 +1,4 @@
-package com.py.sheet.knowBasicMath;
+package com.py.sheet.weeklycontest.gfg;
 
 public class GFG_WC_03_26 {
 
