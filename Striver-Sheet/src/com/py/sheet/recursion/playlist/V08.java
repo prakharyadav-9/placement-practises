@@ -1,6 +1,6 @@
 package com.py.sheet.recursion.playlist;
 
-import java.util.Stack;
+import java.util.*;
 
 public class V08 {
     /*
@@ -11,6 +11,7 @@ public class V08 {
     static 
     public void sumToK(int arr[],int k ){
         Stack<Integer> picked= new Stack<>();
+        Arrays.sort(arr);
         f(0, arr, k, picked);
     } 
 
@@ -33,8 +34,8 @@ public class V08 {
 
 
     public static void main(String ...args){
-        int arr[] = {2,7,3,6,};
-        int target=7;
+        int arr[] ={7,2,6,5};// {2,7,3,6,};
+        int target=16;//7;
         sumToK(arr, target);
 
     }
