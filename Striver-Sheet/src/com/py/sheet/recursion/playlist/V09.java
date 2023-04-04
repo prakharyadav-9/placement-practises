@@ -41,8 +41,8 @@ public class V09 {
         }
     }
     public static void main(String ...args){
-        int arr[]= {1,2,1,2,2,};
-        int target =4;
+        int arr[]= {10,1,2,7,6,1,5,};//{1,2,1,2,2,};//
+        int target =8;//4;//
         List<List<Integer>> lists = combinationSum(arr,target);
         printList(lists);
     }
