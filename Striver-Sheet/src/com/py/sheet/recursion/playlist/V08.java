@@ -34,8 +34,8 @@ public class V08 {
 
 
     public static void main(String ...args){
-        int arr[] ={7,2,6,5};// {2,7,3,6,};
-        int target=16;//7;
+        int arr[] ={6,5,7,1,8,2,9,9,7,7,9};//{7,2,6,5};//{2,7,3,6,};// 
+        int target=6;//16;//7;//
         sumToK(arr, target);
 
     }

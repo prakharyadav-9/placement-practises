@@ -2,7 +2,10 @@ package com.py.sheet.recursion.playlist;
 
 import java.util.*;
 
-public class V10 {
+public class V10_SubsetSum_1 {
+    /*
+     * subset sum
+     */
     static
     ArrayList<Integer> subsetSums(List<Integer> arr, int N){
         // code here
