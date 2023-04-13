@@ -18,7 +18,7 @@ public class V14_NQueen {
         boolean []lowerDiagonal;
         Checks(int n){
             this.size = n;
-            this.row = new boolean[n];
+            this.row = new boolean[this.size];
             this.lowerDiagonal = new boolean[2*n-1];
             this.upperDiagonal  = new boolean[2*n-1];
         }
@@ -26,13 +26,13 @@ public class V14_NQueen {
     static ArrayList<ArrayList<Integer>> nQueen(int n){
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
         char board [][] = new char[n][n];
-        // System.out.println(" element "+ Arrays.toString(board[0])+ " !!" + (int)board[0][0]+ " .");
         Checks checks = new Checks(n);
         solve(0,board,new ArrayList<>(), ans,checks,n);
         return ans;
     }
 
-    private static void solve(int column, char[][] board, ArrayList<Integer> config,ArrayList<ArrayList<Integer>> ans, Checks checks, int n) {
+    private static void solve(int column, char[][] board, ArrayList<Integer> config,
+                                ArrayList<ArrayList<Integer>> ans, Checks checks, int n) {
         // all queens are placed
         if(column == n){
             ans.add(new ArrayList<>(config));
@@ -57,13 +57,13 @@ public class V14_NQueen {
     }
 
     private static boolean isSafe(int row, int column, Checks checks, char[][] board,int n) {
-        if(checks.row[row]==false && checks.lowerDiagonal[row+column]==false && checks.upperDiagonal[n-1 +(column-row)]==false)
+        if(!checks.row[row] && !checks.lowerDiagonal[row+column] && !checks.upperDiagonal[n-1 +(column-row)])
             return true;
         return false;
     }
 
     public static void main(String...args){
-        int n=1;
+        int n=4;
         List ans = nQueen(n);
         System.out.println(ans);
         System.out.println(ans.size());
