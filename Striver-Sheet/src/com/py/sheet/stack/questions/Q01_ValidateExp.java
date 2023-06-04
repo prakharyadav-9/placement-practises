@@ -39,7 +39,7 @@ public class Q01_ValidateExp {
     // }
 
     public static void main(String...args){
-        String exp = "()";//"[()]{}{[()()()}}";
+        String exp = "[]())(";//)"()";//"[()]{}{[()()()}}";
         System.out.printf("is valid:: %b",ispar(exp));
     }
     static boolean ispar(String x){
@@ -53,11 +53,17 @@ public class Q01_ValidateExp {
         map.put('{','}');
         map.put('[',']');
 
+        // Extension 
+        Set<Character> closingSet = new HashSet<>(3);
+        closingSet.addAll(Arrays.asList('}',')',']'));
         Stack<Character> stack = new Stack<>();
         for(int i=0;i<xLen;i++){
             char ch = x.charAt(i);
             if(ch == '('|| ch=='[' || ch == '{'){
                 stack.push(ch);
+            }
+            if(stack.isEmpty()==true && (closingSet.contains(ch))){
+                return false;
             }
             if(!stack.isEmpty() && ( ch==')'|| ch==']'|| ch=='}')){
                 if(ch!=map.get(stack.pop())){
@@ -65,6 +71,6 @@ public class Q01_ValidateExp {
                 }
             }
         }
-        return true;
+        return stack.isEmpty();
     }
 }
