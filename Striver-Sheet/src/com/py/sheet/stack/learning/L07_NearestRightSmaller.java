@@ -7,7 +7,7 @@ public class L07_NearestRightSmaller {
     public static void main(String...args){
         int arr[] = {4,5,2,10,8,}; 
                 // {1,4,2,3,6,4};
-        boolean  isCircular  =true;
+        boolean  isCircular  =false;
         int ans[] =  nextSmallerRightElement(arr,isCircular);
         System.out.printf("Original -> %s \n ans  => %s", Arrays.toString(arr), Arrays.toString(ans));
         System.out.println();
