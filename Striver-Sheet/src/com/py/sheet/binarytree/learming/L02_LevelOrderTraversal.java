@@ -23,10 +23,10 @@ public class L02_LevelOrderTraversal {
     public static 
     void main(String...args){
         Node root=new Node(10);
-        levelOrderTravsersal(root);
+        // levelOrderTravsersal(root);
         root.left = new Node(20);
         root.right = new Node(30);
-        levelOrderTravsersal(root);
+        // levelOrderTravsersal(root);
         root.left.left = new Node(40);
         root.right.left = new Node(60);
         root.right.left.right = new Node(90);
@@ -43,7 +43,7 @@ public class L02_LevelOrderTraversal {
              * I guess .poll() or remove() both methods will
              *  work fine
              */
-            Node current = q.poll(); //This method is used to retrieve 
+            Node current = q.remove(); //This method is used to retrieve 
             //  and removes the head of the queue, or returns null if the queue is empty.
             System.out.printf(" %d", current.data);
             if(current.left !=null)
