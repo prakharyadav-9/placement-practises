@@ -35,7 +35,7 @@ public class Q17_KDistanceNodes {
         getTargetNode(root,target);
         // now we have got to find the nodes at K distance
         // keep track of visited nodes
-        System.out.println(" got the target node as ::"+ targetNode.data);
+        // System.out.println(" got the target node as ::"+ targetNode.data);
         Set<Node> visited = new HashSet<>();
         findNodesAtK(targetNode, k,ans,parentMap,visited);
         // last step sort the list and return
