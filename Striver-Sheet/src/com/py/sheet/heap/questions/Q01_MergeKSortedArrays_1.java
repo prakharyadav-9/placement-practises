@@ -2,7 +2,7 @@ package com.py.sheet.heap.questions;
 
 import java.util.*;
 
-public class Q01_MergeKSortedArrays {
+public class Q01_MergeKSortedArrays_1 {
     public static void
     main(String args[]){
         int arr[][] ={{1,2,3,4},{2,2,3,4},
@@ -15,6 +15,7 @@ public class Q01_MergeKSortedArrays {
 
     /*
      * Using Priority Queue
+     * T.C = O(K*K*LogK)
      */
     public static ArrayList<Integer> mergeKArrays(int[][] arr,int k) {
         // Write your code here.
