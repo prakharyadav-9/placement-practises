@@ -16,7 +16,7 @@ public class L01_BSTDeletetion {
         System.out.println("BST");
         for(int ele:elements){
             // tree construction 
-            root=Node.insert(root, ele);
+            root=Node.insertBST(root, ele);
         } 
         // int preOrderArr[] ;
         // preOrderArr = getPreOrderArr(Node.preOrderTraversal(root), "\\[->\"\"","]->\"\"");

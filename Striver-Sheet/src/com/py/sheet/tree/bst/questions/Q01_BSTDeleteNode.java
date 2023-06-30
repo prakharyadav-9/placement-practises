@@ -12,7 +12,7 @@ public class Q01_BSTDeleteNode {
         int elements[] = {50,30,70,40,60,80};
         Node root =null;
         for(int element:elements){
-            root = Node.insert(root, element);
+            root = Node.insertBST(root, element);
         }
         String preorder  = Node.preOrderTraversal(root);
         System.out.println(preorder);

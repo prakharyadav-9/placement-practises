@@ -18,7 +18,7 @@ public class Node {
 
     // Function to insert a node in a BST.
     public static 
-    Node insert(Node root, int key) {
+    Node insertBST(Node root, int key) {
         // your code here
         if(root==null)
             return new Node(key);
