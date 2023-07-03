@@ -6,8 +6,6 @@ import com.py.sheet.graphs.Graph;
 
 public class Q07_CycleDetectDirectedGraph {
     public static void main(String...args){
-        int v=0;
-        int e=0;
         int[][] cons = {
             {1},
             {2},
@@ -16,7 +14,8 @@ public class Q07_CycleDetectDirectedGraph {
             {}
             // {}, {2}, {1, 3}, {2}
         };
-        ArrayList<ArrayList<Integer>> adj= Graph.makeGraph(v, e, cons);
+        int v=cons.length;
+        ArrayList<ArrayList<Integer>> adj= Graph.makeGraph(v,cons);
         // Graph.printList(adj);
         Q07_CycleDetectDirectedGraph obj = new Q07_CycleDetectDirectedGraph();
         boolean isCyclic = obj.isCyclic(cons.length,adj);

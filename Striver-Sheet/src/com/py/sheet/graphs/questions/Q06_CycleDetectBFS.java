@@ -6,8 +6,6 @@ import com.py.sheet.graphs.Graph;
 
 public class Q06_CycleDetectBFS {
     public static void main(String...args){
-        int v=0;
-        int e=0;
         int[][] cons = {
             // {1},
             // {0,2,4},
@@ -16,7 +14,8 @@ public class Q06_CycleDetectBFS {
             // {1,3},
             {}, {2}, {1, 3}, {2}
         };
-        ArrayList<ArrayList<Integer>> adj= Graph.makeGraph(v, e, cons);
+        int v=cons.length;
+        ArrayList<ArrayList<Integer>> adj= Graph.makeGraph(v, cons);
         // Graph.printList(adj);
         Q06_CycleDetectBFS obj = new Q06_CycleDetectBFS();
         boolean isCyclic = obj.isCycle(cons.length,adj);
