@@ -14,4 +14,10 @@ public abstract class Util {
             System.out.printf("%s \n",Arrays.toString(row));
         }
     }
+
+    public static void print2D(char[][] grid) {
+        for(char row[]:grid){
+            System.out.printf("%s \n",Arrays.toString(row));
+        }
+    }
 }
