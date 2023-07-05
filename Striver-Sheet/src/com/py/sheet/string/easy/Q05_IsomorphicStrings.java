@@ -41,8 +41,8 @@ final class Q05_IsomorphicStrings {
 		return true;   
     }
 	public static void main(String[] args) {
-		String str1 = "pijthbsfy";//"xudzhi";//
-		String str2 = "fuladzpbf";//"ftakcz";//
+		String str1 = "xudzhi";//"pijthbsfy";//
+		String str2 = "ftakcz";//"fuladzpbf";//
 		System.out.println(areIsomorphic(str1, str2));
 	}
 
