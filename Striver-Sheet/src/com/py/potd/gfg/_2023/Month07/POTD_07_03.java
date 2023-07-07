@@ -1,6 +1,6 @@
-package com.py.sheet.potd.gfg.Month07;
+package com.py.potd.gfg._2023.Month07;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class POTD_07_03 {
     

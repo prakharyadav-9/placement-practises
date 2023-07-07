@@ -1,11 +1,6 @@
-package com.py.sheet.potd.gfg.Month03;
+package com.py.potd.gfg._2023.Month03;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class POTD_03_04 {
 

@@ -1,4 +1,7 @@
+package com.py.algorithms;
+
 import java.util.*;
+
 public class QuickSort{
 
     static void quickSort(int []arr){

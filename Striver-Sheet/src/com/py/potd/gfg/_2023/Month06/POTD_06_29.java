@@ -1,4 +1,4 @@
-package com.py.sheet.potd.gfg.Month06;
+package com.py.potd.gfg._2023.Month06;
 
 import java.util.*;
 

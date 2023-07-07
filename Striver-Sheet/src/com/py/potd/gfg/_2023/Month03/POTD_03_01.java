@@ -1,4 +1,4 @@
-package com.py.sheet.potd.gfg.Month03;
+package com.py.potd.gfg._2023.Month03;
 
 public class POTD_03_01 {
 

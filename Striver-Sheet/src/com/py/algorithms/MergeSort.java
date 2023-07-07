@@ -1,4 +1,4 @@
-// package com.py.algorithms;
+package com.py.algorithms;
 import java.util.*;
 
 public class MergeSort{

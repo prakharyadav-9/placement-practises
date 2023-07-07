@@ -1,4 +1,4 @@
-package com.py.sheet.potd.gfg.Month06;
+package com.py.potd.gfg._2023.Month06;
 
 public class POTD_06_26 {
     private static final int MOD = 1000000007;

@@ -1,3 +1,5 @@
+package com.py.algorithms;
+
 import java.util.Arrays;
 
 public class QucikSort {

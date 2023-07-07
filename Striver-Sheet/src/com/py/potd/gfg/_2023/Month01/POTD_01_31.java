@@ -1,4 +1,4 @@
-package com.py.sheet.potd.gfg.Month01;
+package com.py.potd.gfg._2023.Month01;
 
 public class POTD_01_31 {
 
@@ -11,7 +11,7 @@ public class POTD_01_31 {
 	static int minRepeats(String A, String B) {
         // code here
 		int j=0;
-		char ch1= B.charAt(j);
+		// char ch1= B.charAt(j);
 		int i= A.indexOf(B.substring(0, 2));;//A.indexOf(ch1);
 		
 		if(i==-1) {

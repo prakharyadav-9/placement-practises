@@ -1,7 +1,6 @@
-package com.py.sheet.potd.gfg.Month02;
+package com.py.potd.gfg._2023.Month02;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class POTD_02_11 {
 
@@ -61,7 +60,7 @@ public class POTD_02_11 {
 	public static void main(String ...arg) {
 		String str= "aabb";//"abcd";//
 		int arr[] = {2,1,3,0};
-		
+		System.out.printf("String:: %s\nArray:: %s\n",str,Arrays.toString(arr));
 		System.out.printf("minimum days:: %d",getMinimumDays(arr.length, str, arr));
 		
 	}
