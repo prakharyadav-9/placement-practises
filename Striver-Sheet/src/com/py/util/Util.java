@@ -20,4 +20,11 @@ public abstract class Util {
             System.out.printf("%s \n",Arrays.toString(row));
         }
     }
+    public static<T> ArrayList<T> arrayToList(T[] arr){
+        ArrayList<T> arrList = new ArrayList<>();
+        for(T e:arr){
+            arrList.add(e);
+        }
+        return arrList;
+    }
 }
