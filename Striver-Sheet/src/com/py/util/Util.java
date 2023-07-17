@@ -27,4 +27,32 @@ public abstract class Util {
         }
         return arrList;
     }
+    /**
+     * Prints the arr from starting idx to ending idx (inclusive)
+     * @param <T>
+     * @param arr
+     * @param start
+     * @param end
+     */
+    public static <T> void printArray(T arr[],int start,int end){
+        System.out.print("[ ");
+        for(int i=start;i<=end;i++){
+            System.out.printf("%d ",arr[i]);
+        }
+        System.out.println("]");
+    }
+    /**
+     * Prints integer arr from starting idx to ending idx (inclusive)
+     * @param <T>
+     * @param arr
+     * @param start
+     * @param end
+     */
+    public static  void printArray(int arr[],int start,int end){
+        System.out.print("[ ");
+        for(int i=start;i<=end;i++){
+            System.out.printf("%d ",arr[i]);
+        }
+        System.out.println("]");
+    }
 }
