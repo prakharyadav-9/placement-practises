@@ -1,0 +1,6 @@
+*.lst
+*.class
+*.jar
+.vscode
+settings.json
+target/
