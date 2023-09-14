@@ -27,19 +27,24 @@ public class Experiment{
 
     public static void 
     main(String ...args){
-        Experiment e = new Experiment();
-        System.out.println(e.getClass());
-        Parent p =e.new Parent();
-        System.out.println(p.hashCode() + " for class => "+ p.getClass());
-        Child1 c1 = e.new Child1();
+        // Experiment e = new Experiment();
+        // System.out.println(e.getClass());
+        // Parent p =e.new Parent();
+        // System.out.println(p.hashCode() + " for class => "+ p.getClass());
+        // Child1 c1 = e.new Child1();
 
-        System.out.println(c1.hashCode() + " "+ c1.getClass());
-        Parent p1 = (Parent) c1;
-        System.out.println(p1.hashCode() + " "+ p1.getClass());
-        Object obj = new Object();
-        System.out.println("using method reference=>");
-        Stream.of(c1.getClass().getDeclaredFields()).forEach(Experiment::tprint);
-        System.out.println(Objects.hash(p,c1));
+        // System.out.println(c1.hashCode() + " "+ c1.getClass());
+        // Parent p1 = (Parent) c1;
+        // System.out.println(p1.hashCode() + " "+ p1.getClass());
+        // Object obj = new Object();
+        // System.out.println("using method reference=>");
+        // Stream.of(c1.getClass().getDeclaredFields()).forEach(Experiment::tprint);
+        // System.out.println(Objects.hash(p,c1));
+
+        String a = "abc";
+        String b = "bbd";
+        System.out.println(b.compareTo(a));
+        System.out.println((char)('a'-32));
     }
 
 }
