@@ -41,10 +41,21 @@ public class Experiment{
         // Stream.of(c1.getClass().getDeclaredFields()).forEach(Experiment::tprint);
         // System.out.println(Objects.hash(p,c1));
 
-        String a = "abc";
-        String b = "bbd";
-        System.out.println(b.compareTo(a));
-        System.out.println((char)('a'-32));
+        // String a = "abc";
+        // String b = "bbd";
+        // System.out.println(b.compareTo(a));
+        // System.out.println((char)('a'-32));
+
+        ArrayList<Integer> l = new ArrayList<>();
+        l.add(0);
+        l.add(2);
+        l.add(4);
+        System.out.println(l);
+        // l.add(10,42);
+        System.out.println(l);
+        l.add(0,-1);
+        System.out.println(l);
+
     }
 
 }

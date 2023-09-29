@@ -1,4 +1,4 @@
-package com.py.mocks.bits.codeforces;
+package com.py.tests.mocks.bits.codeforces;
 
 import java.util.*;
 
