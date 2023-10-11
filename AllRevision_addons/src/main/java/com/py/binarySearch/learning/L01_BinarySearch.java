@@ -2,6 +2,9 @@ package com.py.binarySearch.learning;
 
 public class L01_BinarySearch {
     
+    /**
+     * Link: https://leetcode.com/problems/binary-search/ 
+     */
     public static void main(String args[]){
         int arr[] = {3,4,6,7,9,12,16,17};
         int n = arr.length;

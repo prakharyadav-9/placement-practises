@@ -1,6 +1,9 @@
 package com.py.binarySearch.questions;
 
 public class R02_UpperBound {
+    /*
+     * Link: https://www.codingninjas.com/studio/problems/implement-upper-bound_8165383 
+     */
     public static void main(String args[]){
         int arr[] = {1,4,7,8,10};//{1,2,5,6,10,};
         int x=7;

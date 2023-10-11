@@ -1,6 +1,10 @@
 package com.py.binarySearch.questions;
 
 public class R03_SearchInsPos {
+
+    /*
+     * Link: https://leetcode.com/problems/search-insert-position/ 
+     */
     public int searchInsert(int[] nums, int target) {
         int l=0, h = nums.length-1;
         while(l<=h){

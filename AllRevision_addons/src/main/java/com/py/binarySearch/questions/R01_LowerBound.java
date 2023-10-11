@@ -2,6 +2,9 @@ package com.py.binarySearch.questions;
 
 public class R01_LowerBound {
     
+    /*
+     * Link: https://www.codingninjas.com/studio/problems/lower-bound_8165382 
+     */
     public static void main(String aargs[]){
         int arr[] = {1,2,2,3,3,5,10};
         int x=0;

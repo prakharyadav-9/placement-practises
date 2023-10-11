@@ -4,6 +4,9 @@ import java.util.*;
 
 public class R04_CeilFloor {
     
+    /*
+     * Link: https://practice.geeksforgeeks.org/problems/ceil-the-floor2802/1 
+     */
     public static void main(String[]args){
         int []arr={5,6,8,9,6,5,5,6};
         int x=7;
