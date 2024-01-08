@@ -1,4 +1,4 @@
-package com.py.binarySearch.learning;
+package com.py.revision.binarySearch.learning;
 
 public class L01_BinarySearch {
     

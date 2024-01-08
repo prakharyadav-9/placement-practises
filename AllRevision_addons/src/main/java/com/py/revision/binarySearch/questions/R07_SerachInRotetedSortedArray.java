@@ -1,4 +1,4 @@
-package com.py.binarySearch.questions;
+package com.py.revision.binarySearch.questions;
 
 public class R07_SerachInRotetedSortedArray {
     

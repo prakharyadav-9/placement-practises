@@ -1,4 +1,4 @@
-package com.py.binarySearch.questions;
+package com.py.revision.binarySearch.questions;
 
 import java.util.Arrays;
 
