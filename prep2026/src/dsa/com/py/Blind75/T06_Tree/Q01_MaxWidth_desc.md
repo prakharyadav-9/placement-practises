@@ -1,3 +1,15 @@
+###
+Prompt Used:
+
+given the DSA question in Q01_MaxWidth_desc.md file and the solution in Q01_MaxWidth.java.
+find out why the solution are not working and fix the solution.
+try all the given examples as inputs.
+
+create a main clas file to run the Solution.
+
+###
+
+## Question Description
 Given the root of a binary tree, return the maximum width of the given tree.
 
 The maximum width of a tree is the maximum width among all levels.
