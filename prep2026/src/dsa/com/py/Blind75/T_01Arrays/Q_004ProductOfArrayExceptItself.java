@@ -5,15 +5,17 @@ import java.util.Arrays;
 public class Q_004ProductOfArrayExceptItself {
 
     public static void main(String args[]){
-        int input[] = {
-            // 1,2,3,4
-            -1,1,0,-3,3
+        A obj = (i,j) -> i+j;
+        System.out.println(obj.add(2, 02));
+        // int input[] = {
+        //     // 1,2,3,4
+        //     -1,1,0,-3,3
 
-        };
-        Q_004ProductOfArrayExceptItself outerObj = new Q_004ProductOfArrayExceptItself();
+        // };
+        // Q_004ProductOfArrayExceptItself outerObj = new Q_004ProductOfArrayExceptItself();
 
-        Solution obj = outerObj.new Solution();
-        System.out.println(Arrays.toString(obj.productExceptSelf(input)));
+        // Solution obj = outerObj.new Solution();
+        // System.out.println(Arrays.toString(obj.productExceptSelf(input)));
     }
     
 
