@@ -1,4 +1,9 @@
-class Solution {
+package dsa.com.py.Blind75.T_01Arrays;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+class Q_0010_3Sum {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
