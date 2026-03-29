@@ -1,4 +1,4 @@
-package dsa.com.py.Blind75.T06_Tree;
+package dsa.com.py.Blind75.T_06Tree;
 
 import java.util.*;
 

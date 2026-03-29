@@ -1,6 +1,6 @@
-package dsa.com.py.Blind75.T06_Tree;
+package dsa.com.py.Blind75.T_06Tree;
 
-import dsa.com.py.Blind75.T06_Tree.Q01_MaxWidth.TreeNode;
+import dsa.com.py.Blind75.T_06Tree.Q01_MaxWidth.TreeNode;
 
 public class Q01_MaxWidthTest {
     public static void main(String[] args) {
