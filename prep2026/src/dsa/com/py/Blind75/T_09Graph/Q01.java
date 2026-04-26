@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     private class Node{
         char ch;
@@ -16,12 +18,34 @@ class Solution {
       Map<Character, Node> map = new HashMap<>();
       String u;
       String v;
-      for(int i=0; i< words.length; i++){
+      // BUG FIX #1: Loop only through consecutive pairs (i to i+1)
+      // Original had: for(int i=0; i< words.length; i++) with ternary operator 
+      // if(i+1>=words.length) assigning words[i], causing comparison of word with itself
+      for(int i=0; i< words.length-1; i++){
         u = words[i];
-        v = (i+1)>=words.length?words[i]: words[i+1];
-        if(u.contains(v) && u.length()>v.length()) return "";
+        v = words[i+1];
+        // BUG FIX #2: Check if u is a PREFIX of v but u is longer (invalid case)
+        // Original used u.contains(v) which checks substring, not prefix
+        // Valid ordering: if u is prefix of v, u must come before v
+        // Invalid: if u is longer than v and v is a prefix of u
+        if(u.startsWith(v) && u.length()>v.length()) return "";
         makeGraph(u,v, map, graph);
       }
+      
+      // BUG FIX #4: Handle single word or words with no comparisons
+      // When only 1 word exists, the loop doesn't execute, so no characters are added
+      // Even with multiple words, some characters might only appear in later words
+      // All characters must be in the map for topological sort to work correctly
+      for(String word : words) {
+        for(char ch : word.toCharArray()) {
+          if(!map.containsKey(ch)) {
+            Node node = new Node(ch);
+            graph.add(node);
+            map.put(ch, node);
+          }
+        }
+      }
+      
       return topoSort(graph, map);
     }
     private void makeGraph( String u, String v, Map<Character, Node> map, Set<Node> graph){
@@ -37,20 +61,13 @@ class Solution {
           uNode.neighbors.add(vNode);
           graph.add(uNode);
           graph.add(vNode);
+          // BUG FIX #3: Break after finding first difference
+          // Original code continued loop after first difference, extracting multiple edges
+          // Example: "rftt" vs "te" would incorrectly extract r->t AND f->e
+          // This causes cycles: t->f->e->r->t
+          // Lexicographic order only uses the FIRST differing character
+          break;
         }
-      }
-      handleSingleString(i, u, map,graph);
-      handleSingleString(i, v, map,graph);
-    }
-    private void handleSingleString(int i, String s, Map<Character, Node> map, Set<Node> graph){
-      while(i<s.length()){
-        char ch1 = s.charAt(i);
-        if(map.containsKey(ch1) == false){
-          Node node = new Node(ch1);
-          graph.add(node);
-          map.put(ch1, node);
-        }
-        i++;
       }
     }
 
